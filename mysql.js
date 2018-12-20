@@ -24,7 +24,7 @@ create user 'zad'@'localhost' identified by '123456';
 // 删除用户
 DELETE FROM user WHERE User="test" and Host="localhost";
 flush privileges;
-drop database testDB;
+drop database testDB;          //      (  创建数据库到授权其他用户要一气呵成.....................  )
 // 还可以
 CREATE USER username IDENTIFIED BY 'password';
 // 删除账户及权限：
@@ -45,7 +45,7 @@ grant select,delete,update,create,drop on *.* to test@'%'; // ”%” 表示对�
 // revoke all privileges on testdb from test@'localhost';
 // FLUSH PRIVILEGES;    flush privileges;
 
-查看 MySQL 用户权限 查看当前用户（自己）权限：  show grants;
+查看 MySQL 用户权限 查看当前用户（自己）权限：  show grants;   /* ----------------------------- */
 查看其他 MySQL 用户权限：  show grants for dba@localhost;
 
 撤销已经赋予给 MySQL 用户权限的权限。 revoke 跟 grant 的语法差不多，只需要把关键字 to 换成 from 即可：
@@ -73,7 +73,7 @@ mysql> SHOW TABLE STATUS from RUNOOB LIKE 'runoob%';     # 表名以runoob开头
 mysql> SHOW TABLE STATUS from RUNOOB LIKE 'runoob%'\G;   # 加上 \G，查询结果按列打印
  
  
-// <!-- --------------------------------------------------------------------------------------------- -->
+// <!-- ------------------------------------------------------------------------------------------------------------------ -->
 // MySQL 创建数据库  CREATE DATABASE 数据库名;  // 貌似只有root下能建库
 
 MySQL 删除数据库  drop database <数据库名>;
