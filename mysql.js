@@ -102,7 +102,7 @@ INSERT INTO table_name ( field1, field2,...fieldN )
 VALUES
 ( value1, value2,...valueN );
 // INSERT INTO table_name  (field1, field2,...fieldN)  VALUES  (valueA1,valueA2,...valueAN),(valueB1,valueB2,...valueBN),(valueC1,valueC2,...valueCN)......;
-添加数据的时候可以规定列进行添加。  如果所有的列都要添加数据可以不规定列进行添加数据：
+添加数据的时候可以规定列进行添加。如果所有的列都要添加数据可以不规定列进行添加数据：
 // INSERT INTO runoob_tbl
     -> VALUES
     -> ("JAVA 教程", "RUNOOB.COM", '2016-05-06'); 
